@@ -34,9 +34,7 @@ class RecordController extends AbstractController
     {
         $records = $repository->findAll();
 
-        return $this->render(
-            'record/index.html.twig',
-            ['records' => $records]);
+        return $this->render('record/index.html.twig', ['records' => $records]);
     }
 
     /**

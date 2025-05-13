@@ -21,7 +21,7 @@ class HelloController extends AbstractController
     /**
      * Index action.
      *
-     * @param string $user_name User input
+     * @param string $userName User input
      *
      * @return Response HTTP Response
      */
@@ -32,11 +32,11 @@ class HelloController extends AbstractController
         defaults: ['user_name' => 'world'],
         methods: ['GET']
     )]
-    public function index(string $user_name): Response
+    public function index(string $userName): Response
     {
         return $this->render(
             'hello/index.html.twig',
-            ['user_name' => $user_name]
+            ['user_name' => $userName]
         );
     }
 }
